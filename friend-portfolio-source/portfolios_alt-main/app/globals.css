@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0F1115;
+  color: #FFFFFF;
+  font-family: "Aptos", "Segoe UI Variable Text", "Segoe UI", system-ui, sans-serif;
+}
+
+body::selection {
+  background: #E6B800;
+  color: #0F1115;
+}
+
+@layer utilities {
+  .text-h1-lg {
+    font-size: 5vw;
+  }
+
+  .text-h2-lg {
+    font-size: 2.5vw;
+  }
+
+  .text-body-lg {
+    font-size: 1.2vw;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+}
+
+.roboto,
+.roboto1,
+.roboto2,
+.sora,
+.inter {
+  font-family: "Aptos", "Segoe UI Variable Text", "Segoe UI", system-ui, sans-serif;
+}
+
+.containerx {
+  @apply lg:px-[6vw] px-[0.4rem];
+}
+
+.heading {
+  @apply lg:text-[1.2vw] text-[1.3rem];
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #FFFFFF !important;
+}

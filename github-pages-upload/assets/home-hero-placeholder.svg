@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1100" role="img" aria-label="Abstract aerospace and manufacturing placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#050816"/>
+      <stop offset="0.48" stop-color="#0b1530"/>
+      <stop offset="1" stop-color="#102a43"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="72%" cy="30%" r="42%">
+      <stop offset="0" stop-color="#7dd3fc" stop-opacity="0.48"/>
+      <stop offset="0.42" stop-color="#38bdf8" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="32%" cy="58%" r="36%">
+      <stop offset="0" stop-color="#a78bfa" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#a78bfa" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5eead4" stop-opacity="0.1"/>
+      <stop offset="0.5" stop-color="#7dd3fc" stop-opacity="0.72"/>
+      <stop offset="1" stop-color="#a78bfa" stop-opacity="0.18"/>
+    </linearGradient>
+  </defs>
+  <rect width="1800" height="1100" fill="url(#bg)"/>
+  <rect width="1800" height="1100" fill="url(#glowA)"/>
+  <rect width="1800" height="1100" fill="url(#glowB)"/>
+  <g opacity="0.26" stroke="#9fb0c8" stroke-width="1">
+    <path d="M0 760 C260 700 430 820 710 760 S1170 650 1800 740" fill="none"/>
+    <path d="M0 830 C330 770 590 900 890 822 S1320 720 1800 800" fill="none"/>
+    <path d="M0 900 C360 850 660 960 980 890 S1390 805 1800 875" fill="none"/>
+  </g>
+  <g opacity="0.2" stroke="#7dd3fc" stroke-width="1">
+    <path d="M180 120 V980"/>
+    <path d="M420 80 V1020"/>
+    <path d="M660 100 V1000"/>
+    <path d="M900 60 V1040"/>
+    <path d="M1140 100 V1000"/>
+    <path d="M1380 80 V1020"/>
+    <path d="M1620 120 V980"/>
+    <path d="M80 230 H1720"/>
+    <path d="M80 430 H1720"/>
+    <path d="M80 630 H1720"/>
+    <path d="M80 830 H1720"/>
+  </g>
+  <g transform="translate(1000 220) rotate(-8)" fill="none" stroke="url(#line)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M-420 170 L80 20 C150 0 220 18 280 54 L390 120 C410 132 402 164 378 164 L160 160 L-20 260 L-110 252 L20 160 L-288 150 L-410 212 L-488 198 Z"/>
+    <path d="M-44 150 L-104 58 L-34 68 L82 154"/>
+  </g>
+  <g transform="translate(1120 690)" opacity="0.72">
+    <rect x="-330" y="70" width="640" height="18" rx="9" fill="#7dd3fc" opacity="0.42"/>
+    <rect x="-250" y="18" width="120" height="52" rx="6" fill="#5eead4" opacity="0.28"/>
+    <rect x="-80" y="-18" width="150" height="88" rx="6" fill="#7dd3fc" opacity="0.34"/>
+    <rect x="125" y="28" width="110" height="42" rx="6" fill="#a78bfa" opacity="0.3"/>
+    <circle cx="-288" cy="118" r="34" fill="none" stroke="#edf5ff" stroke-width="8" opacity="0.48"/>
+    <circle cx="268" cy="118" r="34" fill="none" stroke="#edf5ff" stroke-width="8" opacity="0.48"/>
+  </g>
+  <path d="M0 1010 C420 900 820 1060 1800 930 L1800 1100 L0 1100 Z" fill="#020617" opacity="0.62"/>
+</svg>

@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Downtime Optimization | Arya Raut</title>
+    <meta name="description" content="Downtime optimization and cost reduction master's project by Arya Raut." />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body class="inner-page">
+    <header class="site-header is-scrolled" data-header>
+      <a class="brand" href="../index.html"><span class="brand-mark" aria-hidden="true"></span><span>Arya Raut</span></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle><span class="sr-only">Menu</span><span></span><span></span><span></span></button>
+      <nav id="site-nav" class="site-nav" data-nav>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../blog/index.html">Blog</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <p class="eyebrow">Master's Project</p>
+        <h1>Downtime Optimization and Cost Reduction</h1>
+        <p>
+          A production-line optimization project designed to reduce idle time, understand cost drivers, and improve
+          scheduling decisions across a complex manufacturing process.
+        </p>
+      </section>
+
+      <section class="metric-runway" aria-label="Project result metrics">
+        <div class="metric-card">
+          <span data-count="12" data-suffix="%">0%</span>
+          <p>Idle-time reduction modeled</p>
+        </div>
+        <div class="metric-card">
+          <span data-count="15" data-suffix="%">0%</span>
+          <p>Throughput improvement modeled</p>
+        </div>
+        <div class="metric-card">
+          <span data-count="0.7" data-prefix="$" data-suffix="M" data-decimals="1">$0.0M</span>
+          <p>Annual cost reduction modeled</p>
+        </div>
+      </section>
+
+      <section class="story-band">
+        <div class="story-copy">
+          <p class="eyebrow">The System</p>
+          <h2>A busy assembly line where delays, idle machines, people, and utilities all carry cost.</h2>
+          <p>
+            In high-variation manufacturing environments such as automotive and electronics production, process complexity can
+            create production delays, machine downtime, quality issues, and higher unit cost. Our project framed the line as an
+            optimization problem: schedule and sequence tasks so the system loses less time and spends less money.
+          </p>
+        </div>
+        <figure class="process-figure">
+          <button class="image-frame" type="button" data-lightbox="downtime-map" aria-label="Open assembly line process map">
+            <img src="../assets/projects/downtime/assembly-line-process-map.jpg" alt="Assembly line process map with stations, storage areas, and transmission line" />
+          </button>
+          <figcaption>Figure from the project report: demonstration diagram for the production process.</figcaption>
+        </figure>
+      </section>
+
+      <section class="section alt">
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow">Model Logic</p>
+            <h2>We translated the production system into decisions, constraints, costs, and sensitivity tests.</h2>
+          </div>
+          <p>
+            The model treated scheduling, station assignment, machine idle state, labor requirements, tooling needs, and task
+            completion time as connected decisions rather than separate symptoms.
+          </p>
+        </div>
+
+        <div class="interactive-model" data-tabs>
+          <div class="tab-list" role="tablist" aria-label="Optimization model sections">
+            <button class="tab-button is-active" type="button" data-tab-button="decisions">Decision Variables</button>
+            <button class="tab-button" type="button" data-tab-button="constraints">Constraints</button>
+            <button class="tab-button" type="button" data-tab-button="objective">Objective</button>
+          </div>
+          <div class="tab-panel is-active" data-tab-panel="decisions">
+            <h3>What the model decides</h3>
+            <p>
+              The report defined binary and continuous variables for task scheduling, machine working or idle state, people
+              required per task, idle labor, station assignment, tooling requirement, final fitment, assembly time, and delay time.
+            </p>
+            <div class="formula-grid">
+              <span>x[i,j]: task scheduled at time j</span>
+              <span>y[k]: machine working or idle</span>
+              <span>P[i]: people required for task i</span>
+              <span>T[i]: completion time of task i</span>
+            </div>
+          </div>
+          <div class="tab-panel" data-tab-panel="constraints">
+            <h3>What the model must respect</h3>
+            <p>
+              Constraints prevented overlapping tasks, enforced delay times, bounded completion time, represented tooling needs,
+              and kept assembly operations feasible. This made the optimization reflect the actual operating rules of a line.
+            </p>
+            <div class="formula-grid">
+              <span>No two tasks can occupy the same time slot</span>
+              <span>Task completion must follow delay logic</span>
+              <span>Assembly time must satisfy minimum process time</span>
+              <span>Final fitment and tool needs are station-dependent</span>
+            </div>
+          </div>
+          <div class="tab-panel" data-tab-panel="objective">
+            <h3>What the model minimizes</h3>
+            <p>
+              The objective function minimized total cost by combining task completion cost, machine idle cost, and idle labor
+              cost. The report also parameterized line breakdown, electricity, compressed air, and manpower costs.
+            </p>
+            <div class="formula-grid">
+              <span>Line breakdown: $11,000 per hour</span>
+              <span>Electricity: $0.30 per kWh</span>
+              <span>Compressed air: $0.10 per cubic mm</span>
+              <span>Manpower: $10 per hour per person</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Analysis Story</p>
+          <h2>The project was designed to answer three practical production questions.</h2>
+        </div>
+        <div class="analysis-grid">
+          <details open>
+            <summary>Where is idle time most expensive?</summary>
+            <p>
+              Station idle-time sensitivity tested how changes in machine and people idle costs affect total cost. This helped
+              identify which parts of the line deserve the most attention when resources are constrained.
+            </p>
+          </details>
+          <details>
+            <summary>How much do small delays matter?</summary>
+            <p>
+              Delay sensitivity tested the effect of 6- and 7-second delay assumptions on the overall schedule. In repeated
+              production systems, even short delays can compound into meaningful throughput and cost impact.
+            </p>
+          </details>
+          <details>
+            <summary>Which cost drivers shape the decision?</summary>
+            <p>
+              Objective-function sensitivity explored downtime, electricity, and compressed-air cost changes so the team could
+              understand the operational drivers behind the optimized result.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <section class="detail-layout compact-detail">
+        <article class="detail-main">
+          <h2>My Takeaway</h2>
+          <p>
+            This project helped me connect optimization theory with manufacturing decision-making. The important part was not
+            just writing equations; it was framing a real production problem so the output could guide scheduling, staffing,
+            downtime reduction, and cost tradeoff decisions.
+          </p>
+          <p>
+          The project also strengthened my ability to frame an optimization model clearly enough to present, test, and defend
+          in a master's-level industrial engineering course.
+          </p>
+          <a class="button primary dark-text" href="../assets/projects/downtime/524_project.pdf" target="_blank" rel="noreferrer">Open project PDF</a>
+        </article>
+        <aside class="detail-aside">
+          <div><span>Course Project</span><strong>Master's industrial engineering project</strong></div>
+          <div><span>Optimization Type</span><strong>Mixed-integer linear programming formulation</strong></div>
+          <div><span>Implementation Plan</span><strong>Julia model with feasibility and sensitivity testing</strong></div>
+          <div><span>Resume Result</span><strong>12% idle-time reduction, 15% throughput improvement, $0.7M annual cost reduction modeled</strong></div>
+        </aside>
+      </section>
+
+      <nav class="next-links"><a href="djs-skylark.html">Next project: DJS Skylark</a><a href="../index.html#projects">All projects</a></nav>
+    </main>
+
+    <div class="lightbox" data-lightbox-modal hidden>
+      <button type="button" class="lightbox-close" data-lightbox-close>Close</button>
+      <img src="../assets/projects/downtime/assembly-line-process-map.jpg" alt="Assembly line process map enlarged" />
+    </div>
+
+    <footer class="site-footer"><p>Arya Raut portfolio</p><a href="../index.html">Home</a></footer>
+    <script src="../script.js"></script>
+  </body>
+</html>
